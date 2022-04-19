@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "dealership.js"></script>
+        <script src = "jquery-3.6.0.js"></script> 
+        <link rel="stylesheet" href="carDealership.css" type="text/css" />
+    </head>
+    <body>
+        <div class = "topHeader">
+            <h1>Andrew's Car Company</h1><img id = "carLogo" src = "carDealershipLogo.jpg" height = "100" width = "150">
+            <hr>
+        </div>
+        <div class = "mainBody"> <!--MainBody Div Container-->
+            <form id = "userCarForm" class = "userForm"> <!--FORM-->
+                <h3>Confirm Choices In Each Section BEFORE Moving To The Next</h3> <!--INSTRUCTION-->
+                <div class = "nameInput"> <!--NAME INPUT BOX-->
+                    <h3>Please enter your First & Last Name, Then enter your Address.</address></h3>
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder ="first name here"><br>
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder ="last name here"><br>
+                    <label for="userAddress">Address:</label>
+                    <input type="text" id="userAddress" name="userAddress" placeholder ="your address here"><br>
+                </div>
+                <div class = "carTypeChoice"> <!--CAR TYPE INPUT BOX-->
+                    <h3>Please choose the type of car you would like: </h3>
+
+                    <input type="radio" id="Honda" name="carType" value="Honda">
+                    <label for="Honda">Honda ($1500)</label><br>
+                    <input type="radio" id="Toyota" name="carType" value="Toyota">
+                    <label for="Toyota">Toyota ($1500)</label><br>
+                    <input type="radio" id="Nissan" name="carType" value="Nissan">
+                    <label for="Nissan">Nissan ($2000)</label><br>
+                    <button class = "buttonSize1" type = "button" onClick = "carTypeConfirm()">Confirm Type</button> <!--USER CONFIRMATION-->
+                    <!--<p id = "carTypeOutput">The Car Type You Chose: </p>-->
+                </div>
+                <div class = "carColorChoice" id = "userCarColor"> <!--CAR COLOR INPUT BOX-->
+                    <h3>Please choose the color of your car</h3>
+                    <input type="radio" id="Sunshine Yellow" name="carColor" value="Sunshine Yellow">
+                    <label for="Sunshine Yellow">Sunshine Yellow (+$10)</label><br>
+                    <input type="radio" id="Navy Blue" name="carColor" value="Navy Blue">
+                    <label for="Navy Blue">Navy Blue (+$20)</label><br>
+                    <input type="radio" id="Midnight Black" name="carColor" value="Midnight Black">
+                    <label for="Midnight Black">Midnight Black (+$20)</label><br>
+                    <button class = "buttonSize1" type = "button" id = "carColorSubmit" onClick = "carColorConfirm()">Confirm Car Color</button> <!--USER CONFIRMATION-->
+                    <!--<p id = "carColorOutput">Your Selected Color: </p>-->
+                </div>
+                <div class = "numberOfDoorsChoice"> <!--NUMBER OF DOORS INPUT BOX-->
+                    <h3>How many doors would you like your car to have?</h3>
+                    <input type="radio" id="doubleDoor" name="doorType" value="doubleDoor">
+                    <label for="doubleDoor">2 Door (STANDARD)</label>
+                    <input type="radio" id="quadDoor" name="doorType" value="quadDoor">
+                    <label for="quadDoor">4 Door (+$200)</label><br><br>
+                    <button class = "buttonSize1" type = "button" onClick = "carDoorConfirm()">Confirm Number Of Doors</button> <!--USER CONFIRMATION-->
+                    <!--<p id = "doorNumberOutput"># of Doors: </p>-->
+                </div>
+                <div class = "mainBody"> <!--MAIN BODY-->
+                    <h3>Now Please, Select Your Engine: </h3>
+                    <select name="engine Select" id="engineSelect">
+                        <option value="Choose">--Choose An Engine--</option>
+                        <option value="v6">v6 Engine (STANDARD)</option>
+                        <option value="v8">v8 Engine (+$500)</option>
+                    </select><br><br>
+                    <!--REVIEW ORDER SECTION-->
+                    <button class = "buttonSize1" type = "button" onClick = "engineConfirm()">Confirm Engine Choice</button><br> <!--USER CONFIRMATION-->
+                    <button class = "buttonSize1" type = "button" onClick = "resetEngine()">Reset Engine Type</button><br>
+                    <p id = "carTypeOutput">The Car Type You Chose: </p>
+                    <p id = "carColorOutput">Your Selected Color: </p>
+                    <p id = "doorNumberOutput"># of Doors: </p>
+                    <p id = "engineOutput">You Selected A: </p>
+                </div>
+                <!--SUBMIT ORDER SECTION-->
+        <div class = "reviewConfirmOrder">
+            <button class = "buttonSize1" type = "button" onClick = "checkPrice()">CHECK THE PRICE</button> <!--USER CONFIRMATION-->
+            <h1 id = "priceOutput">Total Price: </h1>
+            <button class = "buttonSize1" type = "button" onClick = "reviewOrder()">REVIEW YOUR ORDER</button>
+            <button class = "buttonSize1" type = "reset" onClick = "resetOrder()">RESET YOUR ORDER</button><!--RESET FORM-->
+            </form>
+            <br><br>
+        </div>
+        <div class = "footerArea"> <!--FOOTER-->
+            <h3>PAGE MADE BY @ALADRIDO</h3>
+        </div>
+    </body>
+</html>

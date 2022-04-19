@@ -1,0 +1,57 @@
+.topHeader {
+    text-align: center;
+    background-color: #32a86b;
+}
+.mainBody {
+    margin-top: -10px;
+    padding-top: 10px;
+    background-color: #2e5c8c;
+    text-align: center;
+}
+.userForm {
+    margin-top: -15px; 
+}
+.reviewConfirmOrder {
+    margin-top: -10px;
+    padding-top: 10px;
+    background-color: #2e5c8c;
+}
+.footerArea {
+    background-color: #32a86b;
+    text-align: center;
+    margin-top: -20px;
+}
+.nameInput {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.buttonSize1 {
+    height:50px;
+    width:150px;
+    background-color: #cfcfcf;
+}
+.carTypeChoice {
+    width: 400px;
+    padding: 10px;
+    background-color: #32a86b;
+    float: left;
+    height: 200px;
+}
+.carColorChoice {
+    text-align: center;
+    width: 400px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    height: 200px;
+    background-color: #32a86b;
+}
+.numberOfDoorsChoice {
+    text-align: center;
+    width: 400px;
+    padding: 10px;
+    background-color: #32a86b;
+    float: left;
+    height: 200px;
+}
